@@ -1,6 +1,6 @@
 export class PriceCalculator {
   private priceRules;
-  private items: any[];
+  public items: any[];
 
   constructor(priceRules: any) {
     this.priceRules = priceRules;
