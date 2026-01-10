@@ -3,7 +3,15 @@ module.exports = {
   collectCoverage: false,
   // on node 14.x coverage provider v8 offers good speed and more or less good report
   coverageProvider: 'v8',
-  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**', '!<rootDir>/out/**', '!<rootDir>/.next/**', '!<rootDir>/*.config.js', '!<rootDir>/coverage/**'],
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!<rootDir>/out/**',
+    '!<rootDir>/.next/**',
+    '!<rootDir>/*.config.js',
+    '!<rootDir>/coverage/**',
+  ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
     // https://jestjs.io/docs/webpack#mocking-css-modules
