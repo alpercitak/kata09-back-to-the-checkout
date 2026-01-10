@@ -28,7 +28,7 @@ export class PriceCalculator {
       const prices = this.priceRules[k];
 
       while (count) {
-        const items = Object.entries(prices).filter(([k, v]) => {
+        const items = Object.entries(prices).filter(([k, _]) => {
           return parseInt(k) <= count;
         });
         items.sort((a, b) => (a[0] < b[0] ? 1 : -1));
