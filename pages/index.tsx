@@ -35,9 +35,9 @@ export default function Home({}) {
           <div className={styles.heading}>
             Current State
             {calcRef.current.items.length ? (
-              <a style={{ marginLeft: 8 }} href="javascript:void(0)" onClick={() => onClearButtonClick()}>
+              <button style={{ marginLeft: 8 }} onClick={() => onClearButtonClick()}>
                 Clear
-              </a>
+              </button>
             ) : null}
           </div>
           <div className={styles.buttonContainer}>
