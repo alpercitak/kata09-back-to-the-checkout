@@ -1,29 +1,19 @@
 name: build
-
 on:
   push:
-    branches:
-      - "**"
-
+    branches: [main]
   pull_request:
-    branches:
-      - "**"
-
 jobs:
-  build:
-    timeout-minutes: 15
+  run:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v6
-
-      - run: corepack enable
-
+        with:
+          persist-credentials: true
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
-          node-version: "lts/*"
-          cache: pnpm
-
+          node-version: "24"
+          cache: "pnpm"
       - run: pnpm i --frozen-lockfile
-
       - run: pnpm build
